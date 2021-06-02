@@ -1,13 +1,30 @@
+/**
+@copyright
+Robert Bosch GmbH reserves all rights even in the event of industrial property rights.
+We reserve all rights of disposal such as copying and passing on to third parties.
+*/
+/*
+ * Sender.c
+ * Created on: 6.02.2021
+ * Author: Pratik Jaiswal
+*/
 
+/*  --> This program is for transmitting the data received from  the sensor/file to the console/controller
+	-->   It implements the send and recieve functiona and also  functions that facilitate testing of the functionality
+*/
 
-  
+//--------------------------------------------------------------------------------------------------------------- 
+//                                    Includes
+//---------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 
 #include "Sender.h"
 
-
+//--------------------------------------------------------------------------------------------------------------- 
+//                                    Declarartions and Definitions
+//---------------------------------------------------------------------------------------------------------------
 float Temperature_values[DATA_QUANT]={};
 float SOC_Values[DATA_QUANT]={};
 
@@ -16,7 +33,15 @@ Status (*DatatoConsole[])(float Temperature_values[],float SOC_Values[])={ToCons
 
 
 
-
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION:    Scandata
+ */
+/*!    \brief      to read the data from the sensor/file/pdf
+ * 
+ *     \param       temperature values and soc value
+ *     \returns     the status if the copying or reading of data was successfull
+ *
+*//*------------------------------------------------------------------------*/
 Status Scandata(float Temperature_values[], float SOC_Values[])
 {
   Status transmission = NOT_OK;
@@ -41,7 +66,15 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
 
 
 
-
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION:    InputtotheSystem
+ */
+/*!    \brief      to determine the success status of the reading of data
+ * 
+ *     \param       the type of input : file/pdf/sensor data directly
+ *     \returns     the status if the copying or reading of data was successfull
+ *
+*//*------------------------------------------------------------------------*/
 Status InputtotheSystem(SendInput inputdataofBMS)
 {
     Status IsSuccess = NOT_OK;
@@ -50,7 +83,15 @@ Status InputtotheSystem(SendInput inputdataofBMS)
 }
 
 
-
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION:    OutputoftheSyatem
+ */
+/*!    \brief      to determine the success status of the sending the value to the console
+ * 
+ *     \param       the type of output : Console/Controller
+ *     \returns     the status if the copying or reading of data was successfull
+ *
+*//*------------------------------------------------------------------------*/
 Status OutputoftheSyatem(SendOutput outputdataofBMS)
 {
     Status IsSuccess = NOT_OK;
@@ -58,13 +99,15 @@ Status OutputoftheSyatem(SendOutput outputdataofBMS)
     return IsSuccess;
 }
 
-
-
-
-
-
-
-
+/*---------------------------------------------------------------------------*/
+/*     FUNCTION:    ToConsole
+ */
+/*!    \brief      to send the value to the console and return the success ststus
+ * 
+ *     \param       temperature values and soc value
+ *     \returns     the status if the sending of data was successfull
+ *
+*//*------------------------------------------------------------------------*/
 
 Status ToConsole(float Temperature_values[],float SOC_Values[])
 {
