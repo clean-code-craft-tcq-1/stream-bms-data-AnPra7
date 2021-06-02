@@ -19,14 +19,13 @@ typedef enum
 
 typedef enum
 {
-  toConsole,
-  toController
+  toConsole
+    
 }SendOutput;
 
 typedef enum
 {
-  file,
-  server
+  file
 }SendInput;
 
 
