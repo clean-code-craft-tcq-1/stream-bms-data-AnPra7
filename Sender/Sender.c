@@ -34,7 +34,7 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
     transmission = OK;
   }
   fclose(file);*/
-  return transmission;
+  return OK;
 }
 
 
