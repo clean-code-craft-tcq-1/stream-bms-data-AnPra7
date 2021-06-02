@@ -40,7 +40,7 @@ typedef enum
 /*------------------------------Declarations------------------------------------------*/
 
 Status InputtotheSystem(SendInput inputdataofBMS);
-Status OutputoftheSyatem(SendInput inputdataofBMS);
+Status OutputoftheSyatem(SendOutput outputdataofBMS);
 Status Scandata(float Temperature_values[],float SOC_Values[]);
 Status ToConsole(float Temperature_values[],float SOC_Values[]);
 
