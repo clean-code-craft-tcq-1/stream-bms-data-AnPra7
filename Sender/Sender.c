@@ -64,7 +64,7 @@ Status OutputoftheSyatem(SendOutput outputdataofBMS)
 
 
 
-Status ToConsole(float Temperature_values[],float SOC_Values[]);
+/*Status ToConsole(float Temperature_values[],float SOC_Values[]);
 {
     for(int i=0;i<DATA_QUANT;i++)
     {
@@ -73,7 +73,7 @@ Status ToConsole(float Temperature_values[],float SOC_Values[]);
     return OK;
 
 
-}
+}*/
 
 
 
