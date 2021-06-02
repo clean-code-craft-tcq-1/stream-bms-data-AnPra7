@@ -22,16 +22,16 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
   Status transmission = NOT_OK;
   float temperature,soc;
   int i=0;
-  int filevalue = 0;
+ 
   FILE* file = fopen("./Sender/data.txt","r");
   
   if(file)
   {
-    for(int iterate_counter=0;fscanf(file, "%f\t\t%f\n", &temperature,&soc)!=EOF ;iterate_counter++)
+    for(int i=0;fscanf(file, "%f\t\t%f\n", &temperature,&soc)!=EOF ;i++)
     {
-      filevalue=filevalue+1;
-      Temperature_values[iterate_counter] = temperature;
-      SOC_Values[-iterate_counter]         = soc;
+      
+      Temperature_values[i] = temperature;
+      SOC_Values[i]         = soc;
     }
     transmission = OK;
   }
