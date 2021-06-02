@@ -26,7 +26,7 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
   
   if(file)
   {
-    for( i=0; fscanf(file, "%f\t\t%f\n", &temperature,&soc)!=EOF,i++)
+    for( i=0; fscanf(file, "%f\t\t%f\n", &temperature,&soc)!=EOF;i++)
     {
       Temperature_values[i] = temperature;
       SOC_Values[i]         = soc;
