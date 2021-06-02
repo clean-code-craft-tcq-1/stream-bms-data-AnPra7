@@ -19,7 +19,7 @@ Status (*DatatoConsole[])(float Temperature_values[],float SOC_Values[])={ToCons
 
 Status Scandata(float Temperature_values[], float SOC_Values[])
 {
-  /*Status transmission = NOT_OK;
+  Status transmission = NOT_OK;
   float temperature,soc;
   int i=0;
   File * file = fopen("./Sender/data.txt","r");
@@ -33,8 +33,8 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
     }
     transmission = OK;
   }
-  fclose(file);*/
-  return OK;
+  fclose(file);
+  return transmission;
 }
 
 
@@ -64,12 +64,12 @@ Status OutputoftheSyatem(SendOutput outputdataofBMS)
 
 
 
-Status ToConsole(float Temperature_values[],float SOC_Values[]);
+Status ToConsole(float Temperature_values[],float SOC_Values[])
 {
-   /* for(int i=0;i<DATA_QUANT;i++)
+    for(int i=0;i<DATA_QUANT;i++)
     {
         printf("Temperature value is %f and StateOfCharge value is %f\n",Temperature_values[i],SOC_Values[i]);
-    }*/
+    }
     return OK;
 
 
