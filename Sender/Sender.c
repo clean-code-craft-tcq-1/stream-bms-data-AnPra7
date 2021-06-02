@@ -25,17 +25,9 @@ Status (*ScanDatafromfile[])(float Temperature_values[],float SOC_Values[])={Sca
 Status (*DatatoConsole[])(float Temperature_values[],float SOC_Values[])={ToConsole};
 
 
-/******************************************************************************/
-/*!
-***     \function        Scandata
-***
-***     \author     Pratik
-\par    File_description
-***     Read the data from the file and the inputs are temperature and state of charges
-*\n*/
-/*********************************************************************************/
 
-Status Scandata(float Temperature_values[], float SOC_Values[])
+
+/*Status Scandata(float Temperature_values[], float SOC_Values[])
 {
   Status transmission = NOT_OK;
   float temperature,soc;
@@ -53,17 +45,9 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
   }
   fclose(file);
   return transmission;
-}
+}*/
 
-/******************************************************************************/
-/*!
-***     \function        InputtotheSystem
-***
-***     \author     Pratik
-\par    File_description
-***     To check if the input of the system works fine
-*\n*/
-/*********************************************************************************/
+
 
 
 Status InputtotheSystem(SendInput inputdataofBMS)
