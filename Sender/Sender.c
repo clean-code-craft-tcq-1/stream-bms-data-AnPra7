@@ -78,7 +78,7 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
   Status transmission = NOT_OK;
   float temperature,soc;
   int i=0;
-  File *file = fopen("./Sender/data.txt","r");
+  File * file = fopen("./Sender/data.txt","r");
   
   if(file)
   {
