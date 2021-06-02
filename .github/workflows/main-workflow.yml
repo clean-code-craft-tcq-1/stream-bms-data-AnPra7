@@ -12,7 +12,7 @@ jobs:
 
     - 
     - name: build
-      run: g++ -Wall -Wextra -o testchecker ./*.c* ./Sender/*.c
+      run: g++ -Wall -Wextra -o testchecker ./Sender/*.c
       
     - name: run
       run: ./testchecker
