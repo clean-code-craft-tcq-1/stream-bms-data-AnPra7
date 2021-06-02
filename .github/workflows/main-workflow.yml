@@ -1,4 +1,4 @@
-name: Build and Run
+name: Build and run
 
 on: [push, pull_request]
 
@@ -9,10 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    name: build
+   
+
+    - name: build
       working-directory: ./Sender/
       run: gcc -DMAIN -Wall -Wextra -o ../../testchecker *.c
 
-      
     - name: run
-      run: ./testchecker
+      run: ./testchecker 
