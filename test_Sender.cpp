@@ -14,7 +14,7 @@ TEST_CASE("Testcase to check if the console print is happening periodically")
 {
  
 SendInput inputdataofBMS = file;
-BMS_outputtype outputvaluefetch = printtoconsole;
+SendOutput outputdataofBMS = toConsole;
 REQUIRE(SendInput (inputdataofBMS) == OK);
 REQUIRE(SendOutput  (outputdataofBMS) == OK);
 }
