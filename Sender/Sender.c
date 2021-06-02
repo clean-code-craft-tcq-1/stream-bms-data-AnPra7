@@ -68,7 +68,7 @@ Status OutputoftheSyatem(SendOutput outputdataofBMS)
 
 Status ToConsole(float Temperature_values[],float SOC_Values[])
 {
-    for(int i=0;i<DATA_QUANT;i++)
+    for(int i=0;i<20;i++)
     {
         printf("Temperature value is %f and StateOfCharge value is %f\n",Temperature_values[i],SOC_Values[i]);
     }
@@ -76,21 +76,3 @@ Status ToConsole(float Temperature_values[],float SOC_Values[])
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
