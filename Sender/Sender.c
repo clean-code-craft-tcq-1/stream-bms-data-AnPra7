@@ -27,11 +27,11 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
   
   if(file)
   {
-    for( i=0; fscanf(file, "%f\t\t%f\n", &temperature,&soc)!=EOF;i++)
+    for(int iterate_counter=0;fscanf(file, "%f\t\t%f\n", &temperature,&soc)!=EOF ;iterate_counter++)
     {
       filevalue=filevalue+1;
-      Temperature_values[i] = temperature;
-      SOC_Values[i]         = soc;
+      Temperature_values[iterate_counter] = temperature;
+      SOC_Values[-iterate_counter]         = soc;
     }
     transmission = OK;
   }
