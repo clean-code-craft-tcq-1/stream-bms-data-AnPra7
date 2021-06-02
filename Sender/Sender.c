@@ -23,7 +23,7 @@ Status Scandata(float Temperature_values[], float SOC_Values[])
   float temperature,soc;
   int i=0;
   int filevalue = 0;
-  File* file = fopen("./Sender/data.txt","r");
+  FILE* file = fopen("./Sender/data.txt","r");
   
   if(file)
   {
