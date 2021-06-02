@@ -1,16 +1,8 @@
 #ifndef SENDER_H__
 #define SENDER_H__
 
-/*!
-***     \file        Sender.h
-***
-***     \author      pratik
-***
-\par    File_description Header for the  data streaming source file
-*\n*/
-                  
-/*********************************************************************************/
 
+#include <stdio.h>
 //Definitions and macros
 
 #define DATA_QUANT 50
