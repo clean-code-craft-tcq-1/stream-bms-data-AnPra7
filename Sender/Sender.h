@@ -1,3 +1,6 @@
+#ifndef SENDER_H__
+#define SENDER_H__
+
 /*!
 ***     \file        Sender.h
 ***
@@ -43,3 +46,5 @@ Status InputtotheSystem(SendInput inputdataofBMS);
 Status OutputoftheSyatem(SendOutput outputdataofBMS);
 Status Scandata(float Temperature_values[],float SOC_Values[]);
 Status ToConsole(float Temperature_values[],float SOC_Values[]);
+
+#endif
