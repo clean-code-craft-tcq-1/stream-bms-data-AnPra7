@@ -1,22 +1,12 @@
 
-/******************************************************************************/
-/*!
-***     \file        Sender.c
-***
-***     \author     Pratik
-\par    File_description
-***     BMS data streaming to console
-*\n*/
-/*********************************************************************************/
+
   
-  /********************************** INCLUSIONS ********************************************/
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 
 #include "Sender.h"
 
-/********************************** Declarationms and Inititilaization ********************************************/
 
 float Temperature_values[DATA_QUANT];
 float SOC_Values[DATA_QUANT];
@@ -57,15 +47,7 @@ Status InputtotheSystem(SendInput inputdataofBMS)
     return IsSuccess;
 }
 
-/******************************************************************************/
-/*!
-***     \function        OutputoftheSyatem
-***
-***     \author     Pratik
-\par    File_description
-***     To check if the output of the system works fine
-*\n*/
-/*********************************************************************************/
+
 
 Status OutputoftheSyatem(SendOutput outputdataofBMS)
 {
@@ -80,15 +62,7 @@ Status OutputoftheSyatem(SendOutput outputdataofBMS)
 
 
 
-/******************************************************************************/
-/*!
-***     \function        ToConsole
-***
-***     \author     Pratik
-\par    File_description
-***     Sending Value to Console
-*\n*/
-/*********************************************************************************/
+
 
 Status ToConsole(float Temperature_values[],float SOC_Values[]);
 {
