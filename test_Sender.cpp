@@ -7,7 +7,7 @@
 TEST_CASE("Check if trasmissions are successfull") 
 {
  SendInput inputdataofBMS= file;
- REQUIRE(SendInput (inputdataofBMS) == OK);
+ REQUIRE(SendInput (inputdataofBMS) == NOT_OK);
 }
 
 TEST_CASE("Testcase to check if the console print is happening periodically") 
