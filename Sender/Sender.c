@@ -8,8 +8,8 @@
 #include "Sender.h"
 
 
-float Temperature_values[DATA_QUANT];
-float SOC_Values[DATA_QUANT];
+float Temperature_values[DATA_QUANT]={};
+float SOC_Values[DATA_QUANT]={};
 
 Status (*ScanDatafromfile[])(float Temperature_values[],float SOC_Values[])={Scandata};
 Status (*DatatoConsole[])(float Temperature_values[],float SOC_Values[])={ToConsole};
